@@ -44,7 +44,11 @@ $(document).ready(function (){
             cache:true,
             success:function (data){
                 console.log('OK');
-                }
+                console.log(data.products_total_num);
+                },
+            error:function (){
+                console.log("error");
+            }
                 })
 
 

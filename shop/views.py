@@ -35,6 +35,9 @@ def detail(request, id ,slug):
                                 available=True)
     category = Category.objects.all()
     cart_product_form = CartAddProductForm()
+    session_key=request.session.session_key
+    if not session_key:
+        request.session.cycle_key()
     return render(request,
                   'shop/product/detail.html',
                   {'product': product,'category':category,'cart_product_form':cart_product_form})
