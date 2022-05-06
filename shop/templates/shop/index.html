@@ -64,9 +64,7 @@
 
 
 
-							<li>
-								<a href="{% url "shop:news" %}">Блог</a>
-							</li>
+
 
 							<li>
 								<a href="{% url "shop:about" %}">Про нас</a>
@@ -132,9 +130,7 @@
 				<li>
 					<a href="{% url "shop:store" %}">Магазин</a>
 				</li>
-				<li>
-					<a href="{% url "shop:news" %}">Блог</a>
-				</li>
+
 
 				<li>
 					<a href="{% url "shop:about" %}">Про нас</a>
@@ -179,27 +175,12 @@
 			<div class="sidebar-content flex-w w-full p-lr-65 js-pscroll">
 				<ul class="sidebar-link w-full">
 					<li class="p-b-13">
-						<a href="index.html" class="stext-102 cl2 hov-cl1 trans-04">
+						<a href="{% url "shop:" %}" class="stext-102 cl2 hov-cl1 trans-04">
 							Головна
 						</a>
 					</li>
 
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Бажане
-						</a>
-					</li>
 
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Мій акаунт
-						</a>
-					</li>
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Допомога & FAQs
-						</a>
-					</li>
 				</ul>
 
 				<div class="sidebar-gallery w-full p-tb-30">
@@ -543,11 +524,6 @@
 				</div>
 
 				<div class="flex-w flex-c-m m-tb-10">
-					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
-						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
-						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						 Фільтр
-					</div>
 
 					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
 						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
@@ -621,10 +597,7 @@
 							</div>
 
 							<div class="block2-txt-child2 flex-r p-t-3">
-								<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-									<img class="icon-heart1 dis-block trans-04" src="{% static 'shop/images/icons/icon-heart-01.png' %}" alt="ICON">
-									<img class="icon-heart2 dis-block trans-04 ab-t-l" src="{% static 'shop/images/icons/icon-heart-02.png' %}" alt="ICON">
-								</a>
+
 							</div>
 						</div>
 					</div>
@@ -635,13 +608,7 @@
 
 			<!-- Pagination -->
 			<div class="flex-c-m flex-w w-full p-t-38">
-				<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
-					1
-				</a>
-
-				<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7">
-					2
-				</a>
+				{% include "pagination.html" with page=posts %}
 			</div>
 		</div>
 	</section>
@@ -718,24 +685,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Новостна розсилка
-					</h4>
 
-					<form>
-						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
-							<div class="focus-input1 trans-04"></div>
-						</div>
-
-						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-								Підписатися
-							</button>
-						</div>
-					</form>
-				</div>
 			</div>
 
 			<div class="p-t-40">

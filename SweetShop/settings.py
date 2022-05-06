@@ -28,6 +28,10 @@ SECRET_KEY = 'django-insecure-8crar78p-04-3)nfno@gk0z+-e4k*jxef%k=j_w0e7ut=e#dg*
 DEBUG = True
 
 ALLOWED_HOSTS = []
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com' #Например, smtp.gmail.com
+EMAIL_HOST_USER = 'swetshop.shop@gmail.com' #Например, user@gmail.com. Именно его необходимо указывать как ВАШ_EMAIL_ДЛЯ_ОТПРАВКИ_СООБЩЕНИЯ в исходном коде предыдущего пункта
+EMAIL_HOST_PASSWORD = '159635741258'
 
 
 # Application definition
